@@ -1,0 +1,21 @@
+{
+  "name": "kepulauan-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prettier": "^3.3.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "mermaid>dompurify": "npm:isomorphic-dompurify@^2.15.0"
+    }
+  }
+}
