@@ -1,17 +1,17 @@
 flowchart LR
-    subgraph "\`**CMS**\`"
+    subgraph "`**CMS**`"
         lux
         er
         magazin-cms
     end
 
-    subgraph "\`**External**\`"
+    subgraph "`**External**`"
         DPA:::external
         Comyan:::external
     end
 
 
-    subgraph "\`**lido**\`"
+    subgraph "`**lido**`"
         lido:::livingdocs
     end
 
@@ -20,14 +20,14 @@ flowchart LR
     lido --> online-api
     datascience --> article & homepage
 
-    subgraph "\`**SZ.de-Welt**\`"
+    subgraph "`**SZ.de-Welt**`"
         online-api --> article & homepage & delivery
     end
 
     Comyan --> delivery & lido
     article -.-> Pay
 
-    subgraph "\`**Piano-Welt**\`"
+    subgraph "`**Piano-Welt**`"
         Pay
         ID
         Pay & ID .-> Piano:::external
@@ -40,22 +40,22 @@ flowchart LR
     delivery .-> ID
     online-api --> ID
 
-    subgraph "\`**Magazin**\`"
+    subgraph "`**Magazin**`"
         magazin-cms --> magazin-delivery
     end
 
-    subgraph "\`**Digi**\`"
+    subgraph "`**Digi**`"
         digi
     end
     lido --> digi
 
-    subgraph "\`**Datascience**\`"
+    subgraph "`**Datascience**`"
         datascience
     end
 
     lido --> datascience
 
-    subgraph "\`**App**\`"
+    subgraph "`**App**`"
         app
 
         datascience & online-api & lido & Pay & ID & Piano --> app

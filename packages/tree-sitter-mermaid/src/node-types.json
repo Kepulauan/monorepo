@@ -58,28 +58,6 @@
     ]
   },
   {
-    "type": "_direction",
-    "named": true,
-    "subtypes": [
-      {
-        "type": "direction_bt",
-        "named": true
-      },
-      {
-        "type": "direction_lr",
-        "named": true
-      },
-      {
-        "type": "direction_rl",
-        "named": true
-      },
-      {
-        "type": "direction_tb",
-        "named": true
-      }
-    ]
-  },
-  {
     "type": "_er_attribute_key_type",
     "named": true,
     "subtypes": [
@@ -424,11 +402,33 @@
     ]
   },
   {
+    "type": "_state_direction",
+    "named": true,
+    "subtypes": [
+      {
+        "type": "state_direction_bt",
+        "named": true
+      },
+      {
+        "type": "state_direction_lr",
+        "named": true
+      },
+      {
+        "type": "state_direction_rl",
+        "named": true
+      },
+      {
+        "type": "state_direction_tb",
+        "named": true
+      }
+    ]
+  },
+  {
     "type": "_state_stmt",
     "named": true,
     "subtypes": [
       {
-        "type": "_direction",
+        "type": "_state_direction",
         "named": true
       },
       {
@@ -820,26 +820,6 @@
     }
   },
   {
-    "type": "direction_bt",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "direction_lr",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "direction_rl",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "direction_tb",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "directive",
     "named": true,
     "fields": {},
@@ -857,11 +837,6 @@
         }
       ]
     }
-  },
-  {
-    "type": "dotted_open_arrow",
-    "named": true,
-    "fields": {}
   },
   {
     "type": "er_attribute",
@@ -1994,6 +1969,16 @@
     }
   },
   {
+    "type": "sequence__dotted_open_arrow",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "sequence__solid_point",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "sequence_actor",
     "named": true,
     "fields": {}
@@ -2041,35 +2026,35 @@
       "required": true,
       "types": [
         {
-          "type": "dotted_arrow",
+          "type": "sequence__dotted_arrow",
           "named": true
         },
         {
-          "type": "dotted_cross",
+          "type": "sequence__dotted_cross",
           "named": true
         },
         {
-          "type": "dotted_open_arrow",
+          "type": "sequence__dotted_open_arrow",
           "named": true
         },
         {
-          "type": "dotted_point",
+          "type": "sequence__dotted_point",
           "named": true
         },
         {
-          "type": "solid_arrow",
+          "type": "sequence__solid_arrow",
           "named": true
         },
         {
-          "type": "solid_cross",
+          "type": "sequence__solid_cross",
           "named": true
         },
         {
-          "type": "solid_open_arrow",
+          "type": "sequence__solid_open_arrow",
           "named": true
         },
         {
-          "type": "solid_point",
+          "type": "sequence__solid_point",
           "named": true
         }
       ]
@@ -2454,13 +2439,9 @@
     "fields": {}
   },
   {
-    "type": "solid_point",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "source_file",
     "named": true,
+    "root": true,
     "fields": {},
     "children": {
       "multiple": true,
@@ -2561,6 +2542,26 @@
   },
   {
     "type": "state_description",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "state_direction_bt",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "state_direction_lr",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "state_direction_rl",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "state_direction_tb",
     "named": true,
     "fields": {}
   },
@@ -3022,18 +3023,6 @@
     "named": false
   },
   {
-    "type": "dotted_arrow",
-    "named": true
-  },
-  {
-    "type": "dotted_cross",
-    "named": true
-  },
-  {
-    "type": "dotted_point",
-    "named": true
-  },
-  {
     "type": "else",
     "named": false
   },
@@ -3178,24 +3167,36 @@
     "named": false
   },
   {
+    "type": "sequence__dotted_arrow",
+    "named": true
+  },
+  {
+    "type": "sequence__dotted_cross",
+    "named": true
+  },
+  {
+    "type": "sequence__dotted_point",
+    "named": true
+  },
+  {
+    "type": "sequence__solid_arrow",
+    "named": true
+  },
+  {
+    "type": "sequence__solid_cross",
+    "named": true
+  },
+  {
+    "type": "sequence__solid_open_arrow",
+    "named": true
+  },
+  {
     "type": "sequence_actor",
     "named": false
   },
   {
     "type": "showdata",
     "named": false
-  },
-  {
-    "type": "solid_arrow",
-    "named": true
-  },
-  {
-    "type": "solid_cross",
-    "named": true
-  },
-  {
-    "type": "solid_open_arrow",
-    "named": true
   },
   {
     "type": "state ",

@@ -20,8 +20,6 @@ function printStatement(node: Node): Doc {
       return printVerticeStatement(node);
     case 'flow_stmt_subgraph':
       return printSubgraphStatement(node);
-    case 'end':
-      return printEnd(node);
     case ';':
       return ';';
     default:
@@ -82,13 +80,31 @@ function printMiddleTextLink(node: Node): Doc {
 
 function printSubgraphStatement(node: Node): Doc {
   assert(node.type === 'flow_stmt_subgraph');
-  const [subgraph, id, ...statements] = node.children;
-  console.log(node);
+  const [subgraph, ...statements] = node.children;
+  const end = statements.pop()!;
+
+  if (statements.length === 0) {
+    return p.markAsRoot([subgraph.text, end.text]);
+  }
+
+  if (statements[0].type === 'flow_vertex_id' || 'flow_vertex_text') {
+    const idOrText = statements.shift();
+    return p.markAsRoot([
+      subgraph.text,
+      ' ',
+      idOrText!.text,
+      p.indent([
+        p.hardline,
+        p.join(p.hardline, statements.map(printStatement)),
+      ]),
+      end.text,
+    ]);
+  }
+
   return p.markAsRoot([
     subgraph.text,
-    ' ',
-    id.text,
     p.indent([p.hardline, p.join(p.hardline, statements.map(printStatement))]),
+    end.text,
   ]);
 }
 

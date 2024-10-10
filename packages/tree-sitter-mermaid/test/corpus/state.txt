@@ -39,7 +39,6 @@ stateDiagram-v2
       (state_arrow)
       (state_name))))
 
-
 ==========================
 States
 ==========================
@@ -377,7 +376,7 @@ stateDiagram
 
 (source_file
   (diagram_state
-    (direction_lr)
+    (state_direction_lr)
     (state_stmt_arrow
       (state_name)
       (state_arrow)
@@ -393,7 +392,7 @@ stateDiagram
     (state_stmt_composite
       (state_name)
       (state_composite_body
-        (direction_lr)
+        (state_direction_lr)
         (state_stmt_arrow
           (state_name)
           (state_arrow)

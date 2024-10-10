@@ -3,8 +3,8 @@ package tree_sitter_mermaid_test
 import (
 	"testing"
 
-	tree_sitter "github.com/smacker/go-tree-sitter"
-	"github.com/tree-sitter/tree-sitter-mermaid"
+	tree_sitter "github.com/tree-sitter/go-tree-sitter"
+	tree_sitter_mermaid "github.com/monaqa/tree-sitter-mermaid/bindings/go"
 )
 
 func TestCanLoadGrammar(t *testing.T) {
